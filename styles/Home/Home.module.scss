@@ -8,16 +8,33 @@
 
 .UserPhotoContainer {
     position: relative;
-    top: 75px;
+    top: 80px;
     z-index: 1;
 
     .logo {
-        img {
-            border-radius: 100%;
-        }
+        border-radius: 100%;
     }
 }
 
 .UserDataContainer {
-    padding-top: 200px;
+    padding-top: 75px;
+    max-width: 500px;
+    min-width: 200px;
+    margin-top: 0px;
+
+    .name_card__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .name {
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        .occupation {
+            color: var(--bs-secondary);
+        }
+    }
 }

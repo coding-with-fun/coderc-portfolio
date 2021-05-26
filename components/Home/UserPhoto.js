@@ -8,16 +8,15 @@ const myLoader = ({ src }) => {
 const UserPhoto = () => {
     return (
         <div className={styles.UserPhotoContainer}>
-            <span className={styles.logo}>
-                <Image
-                    loader={myLoader}
-                    src="_next/image?url=profile_image.png"
-                    alt="Harsh Patel"
-                    width={150}
-                    height={150}
-                    priority={true}
-                />
-            </span>
+            <Image
+                loader={myLoader}
+                src="_next/image?url=profile_image.png"
+                alt="Harsh Patel"
+                width={150}
+                height={150}
+                priority={true}
+                className={styles.logo}
+            />
         </div>
     );
 };
