@@ -6,6 +6,18 @@
     height: 100vh;
 }
 
-.logo img {
-    border-radius: 100%;
+.UserPhotoContainer {
+    position: relative;
+    top: 75px;
+    z-index: 1;
+
+    .logo {
+        img {
+            border-radius: 100%;
+        }
+    }
+}
+
+.UserDataContainer {
+    padding-top: 200px;
 }

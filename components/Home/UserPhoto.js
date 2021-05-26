@@ -7,7 +7,7 @@ const myLoader = ({ src }) => {
 
 const UserPhoto = () => {
     return (
-        <div>
+        <div className={styles.UserPhotoContainer}>
             <span className={styles.logo}>
                 <Image
                     loader={myLoader}
