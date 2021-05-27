@@ -16,7 +16,8 @@ const Home = ({ details }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-    let response = await fetch(`${server}/api/details`);
+    // let response = await fetch(`${server}/api/details`);
+    let response = {};
     const details = await response.json();
 
     return {
