@@ -6,7 +6,7 @@ import styles from "../styles/Home/Home.module.scss";
 const Home = ({ details }) => {
     console.log(details);
     return (
-        <Container className={styles.container}>
+        <Container className={styles.HomeContainer}>
             <UserPhoto profileImageUrl={details.user_profile_image} />
             <UserData details={details} />
         </Container>

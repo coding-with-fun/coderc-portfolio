@@ -43,48 +43,6 @@ const UserData = ({ details }) => {
                 </Collapse>
 
                 <CardActions disableSpacing>
-                    <div className={styles.title}>Work</div>
-                    <IconButton
-                        onClick={() => handleExpandClick("work")}
-                        aria-expanded={expanded === "work"}
-                        aria-label="show more"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </CardActions>
-                <Collapse in={expanded === "work"} timeout="auto" unmountOnExit>
-                    <UserWork work={details.job} />
-                </Collapse>
-
-                <CardActions disableSpacing>
-                    <div className={styles.title}>Work</div>
-                    <IconButton
-                        onClick={() => handleExpandClick("work")}
-                        aria-expanded={expanded === "work"}
-                        aria-label="show more"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </CardActions>
-                <Collapse in={expanded === "work"} timeout="auto" unmountOnExit>
-                    <UserWork work={details.job} />
-                </Collapse>
-
-                <CardActions disableSpacing>
-                    <div className={styles.title}>Work</div>
-                    <IconButton
-                        onClick={() => handleExpandClick("work")}
-                        aria-expanded={expanded === "work"}
-                        aria-label="show more"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </CardActions>
-                <Collapse in={expanded === "work"} timeout="auto" unmountOnExit>
-                    <UserWork work={details.job} />
-                </Collapse>
-
-                <CardActions disableSpacing>
                     <div className={styles.title}>Education</div>
                     <IconButton
                         onClick={() => handleExpandClick("education")}

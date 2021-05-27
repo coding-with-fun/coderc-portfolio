@@ -1,51 +1,50 @@
-.container {
+.HomeContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 50px;
-}
 
-.UserPhotoContainer {
-    position: relative;
-    top: 80px;
-    z-index: 1;
+    .UserPhotoContainer {
+        position: relative;
+        top: 80px;
+        z-index: 1;
 
-    .logo {
-        border-radius: 100%;
-    }
-}
-
-.UserDataContainer {
-    padding-top: 75px;
-    max-width: 500px;
-    width: 100%;
-    margin-top: 0px;
-
-    .title {
-        flex-grow: 1;
-        font-weight: 600;
+        .logo {
+            border-radius: 100%;
+        }
     }
 
-    .name_card__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+    .UserDataContainer {
+        padding-top: 75px;
+        max-width: 500px;
+        width: 100%;
+        margin-top: 0px;
 
-        .name {
+        .title {
+            flex-grow: 1;
             font-weight: 600;
-            font-size: 1.3rem;
         }
 
-        .occupation {
-            color: var(--bs-secondary);
-        }
-    }
+        .name_card__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-    .work_card__container,
-    .education_card__container {
-        padding: 8px;
-        padding-top: 0;
+            .name {
+                font-weight: 600;
+                font-size: 1.3rem;
+            }
+
+            .occupation {
+                color: var(--bs-secondary);
+            }
+        }
+
+        .work_card__container,
+        .education_card__container {
+            padding: 8px;
+            padding-top: 0;
+        }
     }
 }

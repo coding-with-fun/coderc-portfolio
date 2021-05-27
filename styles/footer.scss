@@ -1,6 +1,18 @@
 .footer__container {
     position: fixed;
+    background: #fff;
     bottom: 0;
-    text-align: center;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+
+    b {
+        margin: 0 5px;
+    }
+
+    svg {
+        margin-left: 3px;
+    }
 }
