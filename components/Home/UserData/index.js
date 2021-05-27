@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import styles from "../../../styles/Home/Home.module.scss";
 import About from "./About";
 import Education from "./Education";
+import Family from "./Family";
 import Name from "./Name";
 import Work from "./Work";
 
@@ -100,6 +101,32 @@ const UserData = ({ details }) => {
                     unmountOnExit
                 >
                     <Education education={details.education} />
+                </Collapse>
+
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("family")}
+                    className={styles.subHeader}
+                >
+                    <div className={styles.title}>Family Details</div>
+                    <IconButton
+                        aria-expanded={expanded === "family"}
+                        aria-label="show more"
+                        className={
+                            expanded === "family"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse
+                    in={expanded === "family"}
+                    timeout="auto"
+                    unmountOnExit
+                >
+                    <Family family={details.family} />
                 </Collapse>
             </CardContent>
         </Card>
