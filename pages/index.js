@@ -1,28 +1,16 @@
 import { Container } from "reactstrap";
 import UserData from "../components/Home/UserData";
 import UserPhoto from "../components/Home/UserPhoto";
-import { server } from "../config";
+import { myData as jsonDetails } from "../myData";
 import styles from "../styles/Home/Home.module.scss";
 
-const Home = ({ details }) => {
+const Home = () => {
     return (
         <Container className={styles.HomeContainer}>
-            <UserPhoto profileImageUrl={details.user_profile_image} />
-            <UserData details={details} />
+            <UserPhoto profileImageUrl={jsonDetails.user_profile_image} />
+            <UserData details={jsonDetails} />
         </Container>
     );
 };
 
 export default Home;
-
-export const getStaticProps = async () => {
-    // let response = await fetch(`${server}/api/details`);
-    let response = {};
-    const details = await response.json();
-
-    return {
-        props: {
-            details,
-        },
-    };
-};
