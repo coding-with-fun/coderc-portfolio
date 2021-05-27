@@ -3,6 +3,29 @@ export const myData = {
         "https://ik.imagekit.io/coderc/harsh_profile_photo_UpOsxvNv0.png?tr=w-1080,h-1080,fo-auto",
     name: "Harsh Patel",
     current_position: "Software Engineer",
+    about: {
+        age: 23,
+        dob: "21 Dec 1998",
+        maritalStatus: "Never Married",
+        height: "5'8\"",
+        religion: "Hindu",
+        motherTongue: "Gujarati",
+        annualIncome: "Rs. 2 - 3 Lakh",
+        location: "Ahmedabad",
+        caste: "Vaishnav Vania",
+        description: [
+            "I'm an old-school guy with values for life. I am Kadva Patel and Vaishnav Vania.",
+            "I had completed my B.Tech in Computer Engineering and currently pursuing MBA in Finance. I am planning to live permanently in Ahmedabad and work here lifetime.",
+            "I enjoy travelling, exploring new places, meeting new people, photography and writing and reading blogs. I love philosophy, psychology, travelling, photography and reading. I am tech savvy and love new gadgets and software.",
+            "I am looking for someone who's understanding, caring and respectful towards me and my family. I also want my partner to work full-time to support the family.",
+        ],
+        familyDescription:
+            "My dad is a trader businessman and mom is a home-maker. I am a single child.",
+        educationDescription:
+            "I had done B.Tech in Computer Engineering and currently perusing MBA in Finance.",
+        occupationDescription:
+            "I am a Software Developer working as a full-time Web developer in Ahmedabad.",
+    },
     education: [
         {
             id: 0,
@@ -37,4 +60,65 @@ export const myData = {
             city: "Ahmedabad",
         },
     ],
+    family: {
+        motherOccupation: "Housewife",
+        fatherOccupation: "Businessman/Entrepreneur",
+        sister: 0,
+        brother: 0,
+        familyStatus: "Middle Class",
+        familyIncome: "Rs. 5 - 6 Lakh per Annum",
+        familyType: "Nuclear Family",
+        familyValues: "Moderate",
+    },
+    lifestyle: {
+        habits: {
+            food: "Pure Vegetarian",
+            drink: false,
+            smoke: false,
+        },
+        assets: {
+            house: true,
+            car: true,
+        },
+        languagesKnown: ["English", "Gujarati", "Hindi"],
+        bloodGroup: "B+",
+        residentialStatus: "Indian",
+        physicalChallenges: false,
+    },
+    myLikes: {
+        hobbies: [
+            "Bird watching",
+            "Cooking",
+            "Photography",
+            "Solving Crosswords",
+            "Puzzles",
+        ],
+        interests: [
+            "Writing",
+            "Reading / Book clubs",
+            "Listening to music",
+            "Movies",
+            "Sports - Outdoor",
+            "Sports - Indoor",
+            "Video / Computer games",
+            "Yoga / Meditation",
+            "Blogging",
+        ],
+    },
+    astroDetails: {
+        manglik: false,
+        dob: "21 Dec 1998",
+        time: "21:45 hours",
+        city: "Ahmedabad, India",
+    },
+    partnerPreferences: {
+        age: "18 to 23",
+        height: "4'5\"(134cm) to 7'0\"(213cm)",
+        religion: ["Hindu"],
+        community: ["Patel (all)", "Vaishnav (all)"],
+        country: ["India"],
+        state: ["Gujarat"],
+        city: ["Ahmedabad"],
+        diet: ["Vegetarian", "Jain", "Vegan"],
+    },
 };

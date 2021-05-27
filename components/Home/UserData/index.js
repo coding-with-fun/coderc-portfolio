@@ -1,5 +1,3 @@
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import React, { useState } from "react";
 import {
     Card,
     CardActions,
@@ -7,8 +5,10 @@ import {
     Collapse,
     IconButton,
 } from "@material-ui/core";
-import clsx from "clsx";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import React, { useState } from "react";
 import styles from "../../../styles/Home/Home.module.scss";
+import UserAbout from "./About";
 import UserEducation from "./Education";
 import UserName from "./Name";
 import UserWork from "./Work";
@@ -27,6 +27,24 @@ const UserData = ({ details }) => {
                     name={details.name}
                     currentPosition={details.current_position}
                 />
+
+                <CardActions disableSpacing>
+                    <div className={styles.title}>About</div>
+                    <IconButton
+                        onClick={() => handleExpandClick("about")}
+                        aria-expanded={expanded === "about"}
+                        aria-label="show more"
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse
+                    in={expanded === "about"}
+                    timeout="auto"
+                    unmountOnExit
+                >
+                    <UserAbout work={details.job} />
+                </Collapse>
 
                 <CardActions disableSpacing>
                     <div className={styles.title}>Work</div>
