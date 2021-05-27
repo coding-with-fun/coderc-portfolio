@@ -1,5 +1,5 @@
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import React from "react";
+import React, { useState } from "react";
 import {
     Card,
     CardActions,
@@ -11,12 +11,13 @@ import clsx from "clsx";
 import styles from "../../../styles/Home/Home.module.scss";
 import UserEducation from "./Education";
 import UserName from "./Name";
+import UserWork from "./Work";
 
 const UserData = ({ details }) => {
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState("");
 
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
+    const handleExpandClick = (field) => {
+        setExpanded(expanded === "" || expanded !== field ? field : "");
     };
 
     return (
@@ -28,16 +29,34 @@ const UserData = ({ details }) => {
                 />
 
                 <CardActions disableSpacing>
-                    <div className={styles.title}>Education</div>
+                    <div className={styles.title}>Work</div>
                     <IconButton
-                        onClick={handleExpandClick}
-                        aria-expanded={expanded}
+                        onClick={() => handleExpandClick("work")}
+                        aria-expanded={expanded === "work"}
                         aria-label="show more"
                     >
                         <ExpandMoreIcon />
                     </IconButton>
                 </CardActions>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <Collapse in={expanded === "work"} timeout="auto" unmountOnExit>
+                    <UserWork work={details.job} />
+                </Collapse>
+
+                <CardActions disableSpacing>
+                    <div className={styles.title}>Education</div>
+                    <IconButton
+                        onClick={() => handleExpandClick("education")}
+                        aria-expanded={expanded === "education"}
+                        aria-label="show more"
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse
+                    in={expanded === "education"}
+                    timeout="auto"
+                    unmountOnExit
+                >
                     <UserEducation education={details.education} />
                 </Collapse>
             </CardContent>
