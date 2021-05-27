@@ -1,10 +1,10 @@
 import styles from "../../../styles/Home/Home.module.scss";
 
-const UserName = () => {
+const UserName = ({ name, currentPosition }) => {
     return (
         <div className={styles.name_card__container}>
-            <div className={styles.name}>Harsh Patel</div>
-            <div className={styles.occupation}>Software Engineer</div>
+            <div className={styles.name}>{name}</div>
+            <div className={styles.occupation}>{currentPosition}</div>
         </div>
     );
 };

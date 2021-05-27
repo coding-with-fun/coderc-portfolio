@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "../../styles/Home/Home.module.scss";
 
-const UserPhoto = () => {
+const UserPhoto = ({ profileImageUrl }) => {
     return (
         <div className={styles.UserPhotoContainer}>
             <Image
-                src="/harsh_profile_image.png"
+                src={profileImageUrl}
                 alt="Harsh Patel"
                 width={150}
                 height={150}

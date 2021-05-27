@@ -12,7 +12,7 @@ import styles from "../../../styles/Home/Home.module.scss";
 import UserEducation from "./Education";
 import UserName from "./Name";
 
-const UserData = () => {
+const UserData = ({ details }) => {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
@@ -22,7 +22,10 @@ const UserData = () => {
     return (
         <Card className={styles.UserDataContainer} variant="outlined">
             <CardContent>
-                <UserName />
+                <UserName
+                    name={details.name}
+                    currentPosition={details.current_position}
+                />
 
                 <CardActions disableSpacing>
                     <div className={styles.title}>Education</div>
@@ -35,7 +38,7 @@ const UserData = () => {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <UserEducation />
+                    <UserEducation education={details.education} />
                 </Collapse>
             </CardContent>
         </Card>
