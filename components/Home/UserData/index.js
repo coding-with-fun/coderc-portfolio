@@ -31,6 +31,7 @@ const UserData = ({ details }) => {
                 <CardActions
                     disableSpacing
                     onClick={() => handleExpandClick("about")}
+                    className={styles.subHeader}
                 >
                     <div className={styles.title}>About</div>
                     <IconButton
@@ -48,10 +49,13 @@ const UserData = ({ details }) => {
                     <UserAbout about={details.about} />
                 </Collapse>
 
-                <CardActions disableSpacing>
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("work")}
+                    className={styles.subHeader}
+                >
                     <div className={styles.title}>Work</div>
                     <IconButton
-                        onClick={() => handleExpandClick("work")}
                         aria-expanded={expanded === "work"}
                         aria-label="show more"
                     >
@@ -62,10 +66,13 @@ const UserData = ({ details }) => {
                     <UserWork work={details.job} />
                 </Collapse>
 
-                <CardActions disableSpacing>
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("education")}
+                    className={styles.subHeader}
+                >
                     <div className={styles.title}>Education</div>
                     <IconButton
-                        onClick={() => handleExpandClick("education")}
                         aria-expanded={expanded === "education"}
                         aria-label="show more"
                     >
