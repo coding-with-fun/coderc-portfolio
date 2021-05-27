@@ -4,7 +4,7 @@ export const myData = {
     name: "Harsh Patel",
     current_position: "Software Engineer",
     about: {
-        age: 23,
+        age: 22,
         dob: "21 Dec 1998",
         maritalStatus: "Never Married",
         height: "5'8\"",
@@ -14,10 +14,22 @@ export const myData = {
         location: "Ahmedabad",
         caste: "Vaishnav Vania",
         description: [
-            "I'm an old-school guy with values for life. I am Kadva Patel and Vaishnav Vania.",
-            "I had completed my B.Tech in Computer Engineering and currently pursuing MBA in Finance. I am planning to live permanently in Ahmedabad and work here lifetime.",
-            "I enjoy travelling, exploring new places, meeting new people, photography and writing and reading blogs. I love philosophy, psychology, travelling, photography and reading. I am tech savvy and love new gadgets and software.",
-            "I am looking for someone who's understanding, caring and respectful towards me and my family. I also want my partner to work full-time to support the family.",
+            {
+                id: 0,
+                data: "I'm an old-school guy with values for life. I am Kadva Patel and Vaishnav Vania.",
+            },
+            {
+                id: 1,
+                data: "I had completed my B.Tech in Computer Engineering and currently pursuing MBA in Finance. I am planning to live permanently in Ahmedabad and work here lifetime.",
+            },
+            {
+                id: 2,
+                data: "I enjoy travelling, exploring new places, meeting new people, photography and writing and reading blogs. I love philosophy, psychology, travelling, photography and reading. I am tech savvy and love new gadgets and software.",
+            },
+            {
+                id: 3,
+                data: "I am looking for someone who's understanding, caring and respectful towards me and my family. I also want my partner to work full-time to support the family.",
+            },
         ],
         familyDescription:
             "My dad is a trader businessman and mom is a home-maker. I am a single child.",
@@ -80,29 +92,84 @@ export const myData = {
             house: true,
             car: true,
         },
-        languagesKnown: ["English", "Gujarati", "Hindi"],
+        languagesKnown: [
+            {
+                id: 0,
+                data: "English",
+            },
+            {
+                id: 1,
+                data: "Gujarati",
+            },
+            {
+                id: 2,
+                data: "Hindi",
+            },
+        ],
         bloodGroup: "B+",
         residentialStatus: "Indian",
         physicalChallenges: false,
     },
     myLikes: {
         hobbies: [
-            "Bird watching",
-            "Cooking",
-            "Photography",
-            "Solving Crosswords",
-            "Puzzles",
+            {
+                id: 0,
+                data: "Bird watching",
+            },
+            {
+                id: 1,
+                data: "Cooking",
+            },
+            {
+                id: 2,
+                data: "Photography",
+            },
+            {
+                id: 3,
+                data: "Solving Crosswords",
+            },
+            {
+                id: 4,
+                data: "Puzzles",
+            },
         ],
         interests: [
-            "Writing",
-            "Reading / Book clubs",
-            "Listening to music",
-            "Movies",
-            "Sports - Outdoor",
-            "Sports - Indoor",
-            "Video / Computer games",
-            "Yoga / Meditation",
-            "Blogging",
+            {
+                id: 0,
+                data: "Writing",
+            },
+            {
+                id: 1,
+                data: "Reading / Book clubs",
+            },
+            {
+                id: 2,
+                data: "Listening to music",
+            },
+            {
+                id: 3,
+                data: "Movies",
+            },
+            {
+                id: 4,
+                data: "Sports - Outdoor",
+            },
+            {
+                id: 5,
+                data: "Sports - Indoor",
+            },
+            {
+                id: 6,
+                data: "Video / Computer games",
+            },
+            {
+                id: 7,
+                data: "Yoga / Meditation",
+            },
+            {
+                id: 8,
+                data: "Blogging",
+            },
         ],
     },
     astroDetails: {
@@ -114,11 +181,53 @@ export const myData = {
     partnerPreferences: {
         age: "18 to 23",
         height: "4'5\"(134cm) to 7'0\"(213cm)",
-        religion: ["Hindu"],
-        community: ["Patel (all)", "Vaishnav (all)"],
-        country: ["India"],
-        state: ["Gujarat"],
-        city: ["Ahmedabad"],
-        diet: ["Vegetarian", "Jain", "Vegan"],
+        religion: [
+            {
+                id: 0,
+                data: "Hindu",
+            },
+        ],
+        community: [
+            {
+                id: 0,
+                data: "Patel (all)",
+            },
+            {
+                id: 0,
+                data: "Vaishnav (all)",
+            },
+        ],
+        country: [
+            {
+                id: 0,
+                data: "India",
+            },
+        ],
+        state: [
+            {
+                id: 0,
+                data: "Gujarat",
+            },
+        ],
+        city: [
+            {
+                id: 0,
+                data: "Ahmedabad",
+            },
+        ],
+        diet: [
+            {
+                id: 0,
+                data: "Vegetarian",
+            },
+            {
+                id: 1,
+                data: "Jain",
+            },
+            {
+                id: 2,
+                data: "Vegan",
+            },
+        ],
     },
 };

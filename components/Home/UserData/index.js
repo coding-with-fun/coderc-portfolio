@@ -28,10 +28,12 @@ const UserData = ({ details }) => {
                     currentPosition={details.current_position}
                 />
 
-                <CardActions disableSpacing>
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("about")}
+                >
                     <div className={styles.title}>About</div>
                     <IconButton
-                        onClick={() => handleExpandClick("about")}
                         aria-expanded={expanded === "about"}
                         aria-label="show more"
                     >
@@ -43,7 +45,7 @@ const UserData = ({ details }) => {
                     timeout="auto"
                     unmountOnExit
                 >
-                    <UserAbout work={details.job} />
+                    <UserAbout about={details.about} />
                 </Collapse>
 
                 <CardActions disableSpacing>
