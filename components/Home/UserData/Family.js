@@ -1,7 +1,6 @@
 import styles from "../../../styles/Home/Home.module.scss";
 
 const Family = ({ family }) => {
-    console.log(family);
     return (
         <div className={styles.family_card__container}>
             <div className={styles.motherOccupation}>
