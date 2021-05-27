@@ -1,5 +1,6 @@
 export const myData = {
-    user_profile_image: "/harsh_profile_image.png",
+    user_profile_image:
+        "https://ik.imagekit.io/coderc/harsh_profile_photo_UpOsxvNv0.png?tr=w-1080,h-1080,fo-auto",
     name: "Harsh Patel",
     current_position: "Software Engineer",
     education: [
