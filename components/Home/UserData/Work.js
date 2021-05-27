@@ -1,6 +1,6 @@
 import styles from "../../../styles/Home/Home.module.scss";
 
-const UserWork = ({ work }) => {
+const Work = ({ work }) => {
     return (
         <div className={styles.work_card__container}>
             {work.map((detail) => {
@@ -16,4 +16,4 @@ const UserWork = ({ work }) => {
     );
 };
 
-export default UserWork;
+export default Work;

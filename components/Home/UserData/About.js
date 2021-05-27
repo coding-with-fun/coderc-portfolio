@@ -1,6 +1,6 @@
 import styles from "../../../styles/Home/Home.module.scss";
 
-const UserAbout = ({ about }) => {
+const About = ({ about }) => {
     return (
         <div className={styles.about_card__container}>
             <div className={styles.age}>
@@ -82,4 +82,4 @@ const UserAbout = ({ about }) => {
     );
 };
 
-export default UserAbout;
+export default About;

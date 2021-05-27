@@ -8,10 +8,10 @@ import {
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import React, { useState } from "react";
 import styles from "../../../styles/Home/Home.module.scss";
-import UserAbout from "./About";
-import UserEducation from "./Education";
-import UserName from "./Name";
-import UserWork from "./Work";
+import About from "./About";
+import Education from "./Education";
+import Name from "./Name";
+import Work from "./Work";
 
 const UserData = ({ details }) => {
     const [expanded, setExpanded] = useState("");
@@ -23,7 +23,7 @@ const UserData = ({ details }) => {
     return (
         <Card className={styles.UserDataContainer} variant="outlined">
             <CardContent>
-                <UserName
+                <Name
                     name={details.name}
                     currentPosition={details.current_position}
                 />
@@ -33,7 +33,7 @@ const UserData = ({ details }) => {
                     onClick={() => handleExpandClick("about")}
                     className={styles.subHeader}
                 >
-                    <div className={styles.title}>About</div>
+                    <div className={styles.title}>About Me</div>
                     <IconButton
                         aria-expanded={expanded === "about"}
                         aria-label="show more"
@@ -51,7 +51,7 @@ const UserData = ({ details }) => {
                     timeout="auto"
                     unmountOnExit
                 >
-                    <UserAbout about={details.about} />
+                    <About about={details.about} />
                 </Collapse>
 
                 <CardActions
@@ -59,7 +59,7 @@ const UserData = ({ details }) => {
                     onClick={() => handleExpandClick("work")}
                     className={styles.subHeader}
                 >
-                    <div className={styles.title}>Work</div>
+                    <div className={styles.title}>Career</div>
                     <IconButton
                         aria-expanded={expanded === "work"}
                         aria-label="show more"
@@ -73,7 +73,7 @@ const UserData = ({ details }) => {
                     </IconButton>
                 </CardActions>
                 <Collapse in={expanded === "work"} timeout="auto" unmountOnExit>
-                    <UserWork work={details.job} />
+                    <Work work={details.job} />
                 </Collapse>
 
                 <CardActions
@@ -99,7 +99,7 @@ const UserData = ({ details }) => {
                     timeout="auto"
                     unmountOnExit
                 >
-                    <UserEducation education={details.education} />
+                    <Education education={details.education} />
                 </Collapse>
             </CardContent>
         </Card>

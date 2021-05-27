@@ -1,6 +1,6 @@
 import styles from "../../../styles/Home/Home.module.scss";
 
-const UserEducation = ({ education }) => {
+const Education = ({ education }) => {
     return (
         <div className={styles.education_card__container}>
             {education.map((detail) => {
@@ -18,4 +18,4 @@ const UserEducation = ({ education }) => {
     );
 };
 
-export default UserEducation;
+export default Education;

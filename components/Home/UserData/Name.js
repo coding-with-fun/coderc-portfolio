@@ -1,6 +1,6 @@
 import styles from "../../../styles/Home/Home.module.scss";
 
-const UserName = ({ name, currentPosition }) => {
+const Name = ({ name, currentPosition }) => {
     return (
         <div className={styles.name_card__container}>
             <div className={styles.name}>{name}</div>
@@ -9,4 +9,4 @@ const UserName = ({ name, currentPosition }) => {
     );
 };
 
-export default UserName;
+export default Name;
