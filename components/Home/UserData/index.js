@@ -37,6 +37,11 @@ const UserData = ({ details }) => {
                     <IconButton
                         aria-expanded={expanded === "about"}
                         aria-label="show more"
+                        className={
+                            expanded === "about"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
                     >
                         <ExpandMoreIcon />
                     </IconButton>
@@ -58,6 +63,11 @@ const UserData = ({ details }) => {
                     <IconButton
                         aria-expanded={expanded === "work"}
                         aria-label="show more"
+                        className={
+                            expanded === "work"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
                     >
                         <ExpandMoreIcon />
                     </IconButton>
@@ -75,6 +85,11 @@ const UserData = ({ details }) => {
                     <IconButton
                         aria-expanded={expanded === "education"}
                         aria-label="show more"
+                        className={
+                            expanded === "education"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
                     >
                         <ExpandMoreIcon />
                     </IconButton>

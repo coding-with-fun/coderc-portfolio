@@ -29,6 +29,16 @@
             font-weight: 600;
         }
 
+        .nonExpandedIcon {
+            transform: rotate(0deg);
+            transition: transform 300ms ease-in;
+        }
+
+        .expandedIcon {
+            transform: rotate(180deg);
+            transition: transform 300ms linear;
+        }
+
         .name_card__container {
             display: flex;
             justify-content: center;
