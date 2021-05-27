@@ -1,11 +1,12 @@
-import CustomHeader from "../components/CustomHeader";
+import Layout from "../components/Layout";
 import "../styles/globals.scss";
+import "../styles/footer.scss";
 
 function MyApp({ Component, pageProps }) {
     return (
-        <CustomHeader>
+        <Layout>
             <Component {...pageProps} />
-        </CustomHeader>
+        </Layout>
     );
 }
 
