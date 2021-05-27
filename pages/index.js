@@ -1,6 +1,7 @@
 import { Container } from "reactstrap";
 import UserData from "../components/Home/UserData";
 import UserPhoto from "../components/Home/UserPhoto";
+import { server } from "../config";
 import styles from "../styles/Home/Home.module.scss";
 
 const Home = ({ details }) => {
@@ -15,7 +16,7 @@ const Home = ({ details }) => {
 export default Home;
 
 export const getStaticProps = async () => {
-    let response = await fetch("http://localhost:3000/api/details");
+    let response = await fetch(`${server}/api/details`);
     const details = await response.json();
 
     return {
