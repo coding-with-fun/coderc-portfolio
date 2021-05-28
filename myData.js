@@ -172,11 +172,13 @@ export const myData = {
             },
         ],
     },
-    astroDetails: {
+    horoscopeDetails: {
         manglik: false,
         dob: "21 Dec 1998",
         time: "21:45 hours",
         city: "Ahmedabad, India",
+        sunSign: "Cancer",
+        moonSign: "Makar",
     },
     partnerPreferences: {
         age: "18 to 23",

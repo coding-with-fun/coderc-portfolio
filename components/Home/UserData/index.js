@@ -11,6 +11,7 @@ import styles from "../../../styles/Home/Home.module.scss";
 import About from "./About";
 import Education from "./Education";
 import Family from "./Family";
+import HoroscopeDetails from "./HoroscopeDetails";
 import Lifestyle from "./Lifestyle";
 import MyLikes from "./MyLikes";
 import Name from "./Name";
@@ -181,6 +182,34 @@ const UserData = ({ details }) => {
                     unmountOnExit
                 >
                     <MyLikes myLikes={details.myLikes} />
+                </Collapse>
+
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("horoscopeDetails")}
+                    className={styles.subHeader}
+                >
+                    <div className={styles.title}>Horoscope Details</div>
+                    <IconButton
+                        aria-expanded={expanded === "horoscopeDetails"}
+                        aria-label="show more"
+                        className={
+                            expanded === "horoscopeDetails"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse
+                    in={expanded === "horoscopeDetails"}
+                    timeout="auto"
+                    unmountOnExit
+                >
+                    <HoroscopeDetails
+                        horoscopeDetails={details.horoscopeDetails}
+                    />
                 </Collapse>
             </CardContent>
         </Card>
