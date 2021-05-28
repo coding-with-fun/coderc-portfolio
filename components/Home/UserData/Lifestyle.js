@@ -36,7 +36,7 @@ const Lifestyle = ({ lifestyle }) => {
                     {lifestyle.languagesKnown.map((data) => {
                         return (
                             <div
-                                className={styles.descriptionData}
+                                className={styles.languagesKnownData}
                                 key={data.id}
                             >
                                 {data.data}

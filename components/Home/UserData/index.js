@@ -12,6 +12,7 @@ import About from "./About";
 import Education from "./Education";
 import Family from "./Family";
 import Lifestyle from "./Lifestyle";
+import MyLikes from "./MyLikes";
 import Name from "./Name";
 import Work from "./Work";
 
@@ -154,6 +155,32 @@ const UserData = ({ details }) => {
                     unmountOnExit
                 >
                     <Lifestyle lifestyle={details.lifestyle} />
+                </Collapse>
+
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("myLikes")}
+                    className={styles.subHeader}
+                >
+                    <div className={styles.title}>My Likes</div>
+                    <IconButton
+                        aria-expanded={expanded === "myLikes"}
+                        aria-label="show more"
+                        className={
+                            expanded === "myLikes"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse
+                    in={expanded === "myLikes"}
+                    timeout="auto"
+                    unmountOnExit
+                >
+                    <MyLikes myLikes={details.myLikes} />
                 </Collapse>
             </CardContent>
         </Card>
