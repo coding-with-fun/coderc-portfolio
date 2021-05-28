@@ -11,6 +11,7 @@ import styles from "../../../styles/Home/Home.module.scss";
 import About from "./About";
 import Education from "./Education";
 import Family from "./Family";
+import Lifestyle from "./Lifestyle";
 import Name from "./Name";
 import Work from "./Work";
 
@@ -127,6 +128,32 @@ const UserData = ({ details }) => {
                     unmountOnExit
                 >
                     <Family family={details.family} />
+                </Collapse>
+
+                <CardActions
+                    disableSpacing
+                    onClick={() => handleExpandClick("lifestyle")}
+                    className={styles.subHeader}
+                >
+                    <div className={styles.title}>Lifestyle</div>
+                    <IconButton
+                        aria-expanded={expanded === "lifestyle"}
+                        aria-label="show more"
+                        className={
+                            expanded === "lifestyle"
+                                ? styles.expandedIcon
+                                : styles.nonExpandedIcon
+                        }
+                    >
+                        <ExpandMoreIcon />
+                    </IconButton>
+                </CardActions>
+                <Collapse
+                    in={expanded === "lifestyle"}
+                    timeout="auto"
+                    unmountOnExit
+                >
+                    <Lifestyle lifestyle={details.lifestyle} />
                 </Collapse>
             </CardContent>
         </Card>
