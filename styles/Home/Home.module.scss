@@ -22,6 +22,7 @@
 
         .subHeader {
             cursor: pointer;
+            padding-bottom: 0 !important;
         }
 
         .title {
@@ -64,6 +65,18 @@
         .horoscope_card__container {
             padding: 8px;
             padding-top: 0;
+
+            .title {
+                margin-top: 10px;
+            }
+        }
+
+        .about_card__container {
+            .description {
+                .descriptionData {
+                    margin: 5px 0;
+                }
+            }
         }
     }
 }
